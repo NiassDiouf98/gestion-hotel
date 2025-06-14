@@ -1,4 +1,5 @@
 const express = require("express");
+require('dotenv').config();
 const mongoose = require("mongoose");
 const Hotel = require("./models/hotel.model.js");
 const hotelRoute = require("./routes/hotel.route.js");
@@ -39,10 +40,10 @@ app.get("/", (req, res) => {
   res.send("Bonjour, from Express.js!");
 });
 
-mongoose
-  .connect(
-    "***REMOVED***"
-  )
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => {
     console.log("Connected to MongoDB");
     app.listen(3000, () => {
