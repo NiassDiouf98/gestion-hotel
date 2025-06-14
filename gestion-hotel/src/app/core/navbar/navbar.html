@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <div class="navbar-title">Dashboard</div>
+  <div class="navbar-actions">
+    <div class="navbar-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Recherche" />
+    </div>
+    <div class="navbar-notif">
+      <i class="fa-regular fa-bell"></i>
+      <span class="notif-badge">3</span>
+    </div>
+    <div class="navbar-user">
+      <img src="assets/profil.png" alt="User" class="user-avatar" />
+      <span class="status-dot"></span>
+    </div>
+    <button class="navbar-logout" (click)="logout()">
+      <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+  </div>
+</nav>

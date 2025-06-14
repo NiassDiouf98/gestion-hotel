@@ -1,0 +1,103 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 18px 32px;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.navbar-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 24px;
+  padding: 0 16px;
+  height: 38px;
+  min-width: 220px;
+  color: #bdbdbd;
+}
+
+.navbar-search i {
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.navbar-search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: #393e41;
+  width: 140px;
+}
+
+.navbar-notif {
+  position: relative;
+  font-size: 1.3rem;
+  color: #393e41;
+  cursor: pointer;
+}
+
+.notif-badge {
+  position: absolute;
+  top: -7px;
+  right: -10px;
+  background: #ffc107;
+  color: #fff;
+  font-size: 0.70rem;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 0px 5px;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 6px;
+  right: 4px;
+  width: 10px;
+  height: 10px;
+  background: #1de782;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.navbar-logout {
+  background: none;
+  border: none;
+  color: #393e41;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: color 0.2s;
+}
+
+.navbar-logout:hover {
+  color: #ff5252;
+}

@@ -1,0 +1,144 @@
+.sidebar {
+  width: 300px;
+  height: 100%;
+  background-image: url('/assets/fond image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 0 45px 0;
+  box-shadow: 2px 0 8px #0002;
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(33,34,34,0.85);
+  z-index: 0;
+}
+
+.sidebar > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-left: 32px;
+}
+
+.sidebar-logo {
+  width: 36px;
+  height: 36px;
+}
+
+.sidebar-title {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.sidebar-nav {
+  flex: 1;
+  /* padding-left: 32px; */
+}
+
+.sidebar-section {
+  color: #d1d1d1;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  padding-left: 32px;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin: 0;
+  /* margin-bottom: 8px; */
+  width: 100%;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 0px 10px 32px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover {
+  background: #f3f3f3ee;
+  color: #393e41;
+  font-weight: bold;
+}
+
+.icon {
+  width: 22px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.sidebar-user {
+  padding: 0 32px;
+}
+
+.sidebar-user hr {
+  border: none;
+  border-top: 1px solid #bdbdbd7e;
+  margin-bottom: 18px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.user-name {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.user-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: #bdbdbd;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4caf50;
+}
+

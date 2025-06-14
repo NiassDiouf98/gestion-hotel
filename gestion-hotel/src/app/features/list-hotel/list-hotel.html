@@ -1,0 +1,28 @@
+<div class="list-hotel-content">
+  <div class="alert-container">
+    <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="alert alert-error">{{ errorMessage }}</div>
+  </div>
+  <div class="list-hotel-header">
+    <h2>Hôtels <span>{{ hotels.length }}</span></h2>
+    <button class="btn-create" (click)="openModal()">
+      <i class="fa-solid fa-plus"></i>
+      Créer un nouveau hôtel
+    </button>
+  </div>
+  <div class="hotels-grid">
+    <div class="hotel-card" *ngFor="let hotel of hotels">
+      <img [src]="getImageUrl(hotel.image)" [alt]="hotel.name" class="hotel-img" />
+      <div class="hotel-info">
+        <div class="hotel-address">{{ hotel.address }}</div>
+        <div class="hotel-name">{{ hotel.name }}</div>
+        <div class="hotel-price">{{ hotel.price }} {{ hotel.devise }} par nuit</div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-new-hotel
+  [showModal]="showModal"
+  (close)="closeModal()"
+  (create)="addHotel($event)">
+</app-new-hotel>

@@ -1,0 +1,20 @@
+<div class="dashboard-content">
+  <div class="dashboard-header">
+    <h2>Bienvenue sur RED Product</h2>
+    <p>Lorem ipsum dolor sit amet consectetur</p>
+  </div>
+  <div class="dashboard-cards">
+    <ng-container *ngFor="let card of cards">
+      <app-card-dash
+        [icon]="card.icon"
+        [count]="card.count"
+        [title]="card.title"
+        [description]="card.description"
+        [color]="card.color">
+        <ng-container *ngIf="!card.icon && card.circle">
+          <span class="circle">{{ card.circle }}</span>
+        </ng-container>
+      </app-card-dash>
+    </ng-container>
+  </div>
+</div>

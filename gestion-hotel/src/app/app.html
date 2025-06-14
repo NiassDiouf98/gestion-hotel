@@ -1,0 +1,12 @@
+<div class="global-bg"></div>
+<div *ngIf="initialized">
+  <div class="layout">
+    <app-sidebar *ngIf="showHeaderAndHeader"></app-sidebar>
+    <div class="main-content">
+      <app-navbar *ngIf="showHeaderAndHeader"></app-navbar>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+</div>

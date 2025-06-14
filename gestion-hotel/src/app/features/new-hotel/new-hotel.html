@@ -1,0 +1,65 @@
+<div class="modal-backdrop" *ngIf="showModal" (click)="closeModal()"></div>
+<div class="modal" *ngIf="showModal" (click)="$event.stopPropagation()">
+  <div class="modal-header">
+    <button class="modal-back" (click)="closeModal()">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>  CRÉER UN NOUVEAU HÔTEL</span>
+    </button>
+  </div>
+  <hr class="modal-separator" />
+  <form class="modal-form" #hotelForm="ngForm" (ngSubmit)="submit()" novalidate>
+    <div class="modal-row">
+      <div class="modal-group">
+        <label for="hotelName">Nom de l'hôtel</label>
+        <input type="text" id="hotelName" [(ngModel)]="hotel.name" name="name" placeholder="CAP Marniane" required #name="ngModel" />
+        <div class="input-error" *ngIf="name.invalid && name.touched">*Le nom est requis.</div>
+      </div>
+      <div class="modal-group">
+        <label for="hotelAddress">Adresse</label>
+        <input type="text" id="hotelAddress" [(ngModel)]="hotel.address" name="address" placeholder="Les îles du saloum, Mar Lodj" required #address="ngModel" />
+        <div class="input-error" *ngIf="address.invalid && address.touched">*L'adresse est requise.</div>
+      </div>
+    </div>
+    <div class="modal-row">
+      <div class="modal-group">
+        <label for="hotelEmail">E-mail</label>
+        <input type="email" id="hotelEmail" [(ngModel)]="hotel.email" name="email" placeholder="information@gmail.com" required email #email="ngModel" />
+        <div class="input-error" *ngIf="email.invalid && email.touched">Email invalide.</div>
+      </div>
+      <div class="modal-group">
+        <label for="hotelPhone">Numéro de téléphone</label>
+        <input type="text" id="hotelPhone" [(ngModel)]="hotel.phone" name="phone" placeholder="+221 77 777 77 77" required />
+      </div>
+    </div>
+    <div class="modal-row">
+      <div class="modal-group">
+        <label for="hotelPrice">Prix par nuit</label>
+        <input type="number" id="hotelPrice" [(ngModel)]="hotel.price" name="price" placeholder="25000" min="0" required />
+      </div>
+      <div class="modal-group">
+        <label for="hotelCurrency">Devise</label>
+        <select id="hotelCurrency" [(ngModel)]="hotel.devise" name="devise" required>
+          <option value="XOF">F XOF</option>
+          <option value="EUR">€ EUR</option>
+          <option value="USD">$ USD</option>
+        </select>
+      </div>
+    </div>
+    <div class="modal-group modal-photo">
+      <label for="hotelPhoto">Ajouter une photo</label>
+      <div class="photo-upload">
+        <input type="file" accept="image/*" (change)="onFileChange($event)" />
+        <ng-container *ngIf="imagePreview; else placeholder">
+          <img [src]="imagePreview" alt="Aperçu" style="max-width:100%;max-height:120px;border-radius:8px;" />
+        </ng-container>
+        <ng-template #placeholder>
+          <i class="fa-regular fa-image"></i>
+          <span>Ajouter une photo</span>
+        </ng-template>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button type="submit" class="btn-save" [disabled]="hotelForm.invalid">Enregistrer</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+<!-- card-dash.html -->
+<div class="dashboard-card" [ngClass]="color">
+  <div class="card-icon">
+    <ng-container *ngIf="icon; else circleTpl">
+      <i [class]="icon"></i>
+    </ng-container>
+    <ng-template #circleTpl>
+      <span class="circle"><ng-content></ng-content></span>
+    </ng-template>
+  </div>
+  <div>
+    <div class="card-title"><span>{{ count }}</span> {{ title }}</div>
+    <div class="card-desc">{{ description }}</div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+.dashboard-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px 28px;
+  box-shadow: 0 2px 8px #0001;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 90px;
+  gap: 18px;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  margin-right: 10px;
+}
+
+.card-icon .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.violet .card-icon { background: #ede7f6; color: #8e24aa; }
+.violet .circle { background: #8e24aa; }
+.teal .card-icon { background: #e0f2f1; color: #009688; }
+.teal .circle { background: #009688; }
+.yellow .card-icon { background: #fffde7; color: #ffc107; }
+.yellow .circle { background: #ffc107; }
+.red .card-icon { background: #ffebee; color: #e53935; }
+.red .circle { background: #e53935; }
+.purple .card-icon { background: #ede7f6; color: #7c4dff; }
+.purple .circle { background: #7c4dff; }
+.blue .card-icon { background: #e3f2fd; color: #1976d2; }
+.blue .circle { background: #1976d2; }
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #393e41;
+  margin-bottom: 2px;
+}
+.card-title span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: 6px;
+}
+.card-desc {
+  color: #888;
+  font-size: 1rem;
+}

@@ -1,0 +1,32 @@
+/* Ajoute dans app.css ou dashboard.css */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  /* background: #f3f3f3; */
+}
+
+app-navbar {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  /* background: #f3f3f3; */
+}
