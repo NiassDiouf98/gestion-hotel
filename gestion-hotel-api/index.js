@@ -40,10 +40,7 @@ app.get("/", (req, res) => {
   res.send("Bonjour, from Express.js!");
 });
 
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("Connected to MongoDB");
     app.listen(3000, () => {
@@ -53,3 +50,11 @@ mongoose.connect(process.env.MONGODB_URI, {
   .catch((err) => {
     console.error("Error connecting to MongoDB:", err);
   });
+
+  // Hotel.find({})
+  // .then(hotels => {
+  //   console.log("📦 Données dans la base :", hotels );
+  // })
+  // .catch(err => {
+  //   console.error("❌ Erreur lors du find :", err);
+  // });
